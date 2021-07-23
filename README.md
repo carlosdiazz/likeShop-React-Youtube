@@ -1,3 +1,4 @@
+ULTIMO
 # Like Shop
 Este proyecto esta construido usando la tecnologia de React, utilizamos la api de CommerceJs para el manjeo de los productos y la tienda en general, y stripe para el sistema de los pagos.
   
