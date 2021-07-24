@@ -14,6 +14,7 @@ const CustomCard = ({
   basket,
   product,
   addProduct,
+  categoryName,
   updateProduct,
   RemoveItemFromBasket,
 }) => {
