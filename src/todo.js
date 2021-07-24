@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import Products from "./components/Products";
 import Basket from "./components/Basket";
 import Checkout from "./components/Checkout";
-import Hero from "./Hero";
 
 const App2 = ({handleLogout}) => {
   const [categories, setCategories] = useState([]);
