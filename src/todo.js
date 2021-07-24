@@ -108,7 +108,6 @@ const App2 = ({handleLogout}) => {
           <Route exact path="/">
 
             <Products categories={categories} addProduct={addProduct} />
-            <Hero handleLogout={handleLogout} />
           </Route>
           <Route exact path="/basket">
             <Basket
