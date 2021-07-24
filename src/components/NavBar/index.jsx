@@ -11,7 +11,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import "./style.css";
 
-const NavBar = ({ basketItems, totalCost }) => {
+const NavBar = ({ basketItems, totalCost, handleLogout}) => {
   const location = useLocation();
 
   return (
@@ -33,6 +33,7 @@ const NavBar = ({ basketItems, totalCost }) => {
                 width="10px"
                 className="logo"
               />
+              <button onClick={handleLogout}><img src="./cerrar.png" alt="2" />dd</button>
             </Typography>
             {location.pathname === "/basket" ? (
               <div className="basket-wrapper">
