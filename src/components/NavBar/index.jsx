@@ -29,7 +29,7 @@ const NavBar = ({ basketItems, totalCost }) => {
               <img
                 src="https://github.com/carlosdiazz/proyecto-likeshop/blob/main/fronted/src/assets/img/logo.png?raw=true"
                 alt="Like Shop"
-                height="10px"
+                height="10x"
                 width="10px"
                 className="logo"
               />
