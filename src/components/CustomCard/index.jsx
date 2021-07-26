@@ -77,7 +77,7 @@ const CustomCard = ({
                 addProduct(product.id, 1);
               }}
             >
-              <ShoppingCart /> Add to basket
+              <ShoppingCart /> Anadir al Carrito
             </Button>
           </>
         )}
@@ -91,7 +91,7 @@ const CustomCard = ({
                 RemoveItemFromBasket(product.id);
               }}
             >
-              Remove
+              Borrar
             </Button>
             <>
               <Button
