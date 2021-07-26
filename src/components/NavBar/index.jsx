@@ -61,10 +61,8 @@ const NavBar = ({ basketItems, totalCost, handleLogout}) => {
                 <div >
                 <IconButton
                   onClick={handleLogout}
-                >
-                  <Badge badgeContent={basketItems} color="secondary">
-                  <ExitToApp className="custom-basket" />
-                  </Badge>
+                >                 
+                  <ExitToApp className="custom-basket" />         
                 </IconButton>
               </div>
               </div>

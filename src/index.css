@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 
 * {
   box-sizing: border-box;
@@ -10,13 +14,16 @@
 button {
   border: none;
   outline: none;
-  width: 100%;
   padding: 15px 0;
   color: #fff;
   font-size: 16px;
   letter-spacing: 1px;
   background: #015a44;
   cursor: pointer;
+}
+
+.boton{
+  width: 100%;
 }
 
 .login {
@@ -131,8 +138,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0d1117 !important;
   color: #c9d1d9 !important;
-  background-color: #15171a
 }
 
 code {

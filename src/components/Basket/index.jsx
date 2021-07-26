@@ -12,6 +12,7 @@ const Basket = ({
   updateProduct,
   handleEmptyBasket,
   RemoveItemFromBasket,
+
 }) => {
   const [showSpinner, setShowSpinner] = useState(true);
   const loading = () => {
@@ -26,6 +27,7 @@ const Basket = ({
 
   if (!basketData.line_items || !basketData.line_items.length) return loading();
   return (
+
     <Container id="basket">
       <Grid container justify="center" spacing={4}>
         {basketData.line_items.map((item) => {
@@ -41,7 +43,7 @@ const Basket = ({
           );
         })}
       </Grid>
-      <div className="actions">
+      <div className="actions ">
         <Button
           size="small"
           color="secondary"
@@ -50,6 +52,7 @@ const Basket = ({
         >
           Borrar Todo
         </Button>
+
 
         <Button
           size="small"
@@ -61,6 +64,7 @@ const Basket = ({
         </Button>
       </div>
     </Container>
+
   );
 };
 

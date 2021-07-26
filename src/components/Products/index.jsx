@@ -23,7 +23,7 @@ const Products = ({ categories, addProduct }) => {
             }}
           >   
         <Container>
-        <Typography classname="headline" variant="h3" component="h2">
+        <Typography className="headline" variant="h3" component="h2">
           {category.name}
         </Typography>
         <Grid container spacing={4}>

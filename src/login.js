@@ -10,7 +10,8 @@ const Login = (props) => {
             
         <div className='loginContainer'>
 
-            <label>Usuario</label>
+
+            <label>Correo: </label>
             <input
                 type='text'
                 autoFocus
@@ -20,7 +21,7 @@ const Login = (props) => {
             />
 
             <p className='errorMsg'>{emailError}</p>
-            <label>Contrasena</label>
+            <label>Contrasena: </label>
             <input
                 type='password'
                 required
@@ -31,7 +32,7 @@ const Login = (props) => {
             <div className='btnContainer'>
                 { hassAccont ? (
                     <>
-                        <button onClick={handlelogin}>Iniciar Cuenta</button>
+                        <button className='boton' onClick={handlelogin}>Iniciar Cuenta</button>
                         <p> 
                             ¿No tienes una cuenta?
                             <span onClick={()=> setHasAccont(!hassAccont)}>Registrarse</span>
@@ -39,7 +40,7 @@ const Login = (props) => {
                     </>
                     ) : (
                         <>
-                        <button onClick={handleSignup}>Registrase</button>
+                        <button className='boton' onClick={handleSignup}>Registrase</button>
                         <p>¿Tienes una cuenta? <span onClick={()=>setHasAccont(!hassAccont)}>Iniciar Seccion</span></p>
                         </>
                     )}
