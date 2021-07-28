@@ -7,7 +7,25 @@ import {
   ListItemText,
 } from "@material-ui/core";
 
-const BookingDetails = ({ checkoutData, handleBackStep, handleNextStep }) => (
+const BookingDetails = ({ user, setTotalPrice, checkoutData, handleBackStep, handleNextStep, setTotalPriceWithCurrency, }) => {
+  console.log({checkoutData});
+  console.log({user});
+  
+  const shippingCost = user.shippingOptions[0].price.raw;
+  const shippingCurrency = checkoutData.live.currency.code;
+  
+  const totalShippingCost =
+    checkoutData.live.line_items.reduce((acc, product) => {
+      return acc + product.quantity;
+    } , 0) * shippingCost;
+
+    const totalPrice = checkoutData.live.subtotal.raw + totalShippingCost;
+    const totalPriceWithCurrency = `${totalPrice} ${shippingCurrency}`;
+
+    setTotalPrice(totalPrice);
+    setTotalPriceWithCurrency(totalPriceWithCurrency);
+
+  return ( 
   <>
     <List>
       {checkoutData.live.line_items.map((item) => (
@@ -22,9 +40,15 @@ const BookingDetails = ({ checkoutData, handleBackStep, handleNextStep }) => (
         </ListItem>
       ))}
       <ListItem>
+        <ListItemText primary="Shipping cost" />
+        <Typography variant="body2">
+          {`${totalShippingCost} ${shippingCurrency}`}
+        </Typography>
+      </ListItem>
+      <ListItem>
         <ListItemText primary="Total price" />
         <Typography variant="body2">
-          {checkoutData.live.subtotal.formatted_with_code}
+          {totalPriceWithCurrency}
         </Typography>
       </ListItem>
     </List>
@@ -48,5 +72,6 @@ const BookingDetails = ({ checkoutData, handleBackStep, handleNextStep }) => (
     </div>
   </>
 );
-
+};
+ 
 export default BookingDetails;

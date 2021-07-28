@@ -9,15 +9,17 @@ import { loadStripe } from "@stripe/stripe-js";
 const stripePromise = loadStripe('pk_test_51J6EGOBSVjmQa6lP064BSu1O4iy9j4Zn9WQDfoLfURIpHimNsA8MdEoHY6G5vX9Iy47YVyDtLmerZ8UGyAmNx6kb00TkjMrOq3');
 const Payment = ({
   user,
+  totalPrice,
   checkoutData,
   handleBackStep,
   handleNextStep,
   handleCheckout,
+  totalPriceWithCurrency,
 }) => {
   const handleSubmit = async (e, elements, stripe) => {
     e.preventDefault();
 
-    if (!stripe || !elements) return;
+    if (!stripe || !elements || !totalPrice) return;
 
     const cardElement = elements.getElement(CardElement);
 
@@ -51,6 +53,7 @@ const Payment = ({
         },
         line_items: checkoutData.live.line_items,
         fulfillment: { shipping_method: user.shippingOptions },
+        pay_what_you_want: totalPrice,
       };
 
       handleCheckout(checkoutData.id, orderData);
@@ -78,7 +81,7 @@ const Payment = ({
                   disabled={!stripe}
                   color="primary"
                 >
-                  Pay {checkoutData.live.subtotal.formatted_with_symbol}
+                  Pay {totalPriceWithCurrency}
                 </Button>
               </div>
             </form>
