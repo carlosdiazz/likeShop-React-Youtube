@@ -44,6 +44,9 @@ const Checkout = ({ basketData, orderInfo, orderError, handleCheckout }) => {
   const [bookingStep, setBookingStep] = useState("order-address");
   const [checkoutData, setCheckoutData] = useState("");
 
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPriceWithCurrency, setTotalPriceWithCurrency] = useState("");
+
   const previousShippingCountry = usePreviousState(user.shippingCountry);
   const previousShippingSubdivision = usePreviousState(
     user.shippingSubdivision
@@ -228,16 +231,21 @@ const Checkout = ({ basketData, orderInfo, orderError, handleCheckout }) => {
           )}
           {renderRelatedComponent({
             user,
+            
             orderInfo,
             orderError,
+            totalPrice,
             bookingStep,
             handleChange,
             handleSubmit,
             checkoutData,
+            setTotalPrice,
             handleBackStep,
             handleNextStep,
             handleCheckout,
             handleSelectChange,
+            totalPriceWithCurrency,
+            setTotalPriceWithCurrency,
           })}
         </Paper>
       </Container>
