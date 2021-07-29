@@ -13,7 +13,7 @@ import { commerce } from "../../lib/commerce";
 import { renderRelatedComponent } from "./helpers";
 import "./style.css";
 
-const steps = ["order-address", "order-details", "order-payment"];
+const steps = ["Direccion Detalle", "Orden Detalle", "Pago"];
 
 const convertObjectToArray = (countries) =>
   Object.entries(countries || {}).map(([code, name]) => ({ code, name }));

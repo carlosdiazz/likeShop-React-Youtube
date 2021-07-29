@@ -25,7 +25,7 @@ const CheckoutForm = ({
           fullWidth
           id="first-name"
           name="firstName"
-          label="First Name"
+          label="Nombre:"
           value={user.firstName}
           onChange={handleChange}
         />
@@ -34,9 +34,9 @@ const CheckoutForm = ({
         <TextField
           required
           fullWidth
-          id="first-name"
+          id="last-name"
           name="lastName"
-          label="First Name"
+          label="Apellido"
           value={user.lastName}
           onChange={handleChange}
         />
@@ -60,7 +60,7 @@ const CheckoutForm = ({
           id="address"
           name="address"
           value={user.address}
-          label="Address line 1"
+          label="Direccion"
           onChange={handleChange}
         />
       </Grid>
@@ -70,7 +70,7 @@ const CheckoutForm = ({
           fullWidth
           id="city"
           name="city"
-          label="City"
+          label="Ciudad"
           value={user.city}
           onChange={handleChange}
         />
@@ -90,7 +90,7 @@ const CheckoutForm = ({
       <Grid item xs={12} sm={6}>
         <FormControl fullWidth>
           <InputLabel id="shipping-country-select-label">
-            Shipping Country
+            Pais Shiping
           </InputLabel>
           <Select
             required
@@ -112,7 +112,7 @@ const CheckoutForm = ({
       <Grid item xs={12} sm={6}>
         <FormControl fullWidth>
           <InputLabel id="shipping-subdivision-select-label">
-            Shipping Subdivision
+            Ciudades Shiping
           </InputLabel>
           <Select
             required
@@ -134,7 +134,7 @@ const CheckoutForm = ({
       <Grid item xs={12} sm={6}>
         <FormControl fullWidth>
           <InputLabel id="shipping-options-select-label">
-            Shipping Options
+            Opciones del Shiping
           </InputLabel>
           <Select
             required
@@ -156,10 +156,10 @@ const CheckoutForm = ({
 
     <div className="actions">
       <Button size="medium" to="/basket" component={Link} variant="contained">
-        Go Back
+        Volver
       </Button>
       <Button type="submit" size="medium" color="secondary" variant="contained">
-        Next
+        Siguiente
       </Button>
     </div>
   </form>

@@ -73,7 +73,7 @@ const Payment = ({
                   variant="outlined"
                   onClick={(e) => handleBackStep(e, "order-details")}
                 >
-                  Back
+                  Volver
                 </Button>
                 <Button
                   type="submit"
@@ -81,7 +81,7 @@ const Payment = ({
                   disabled={!stripe}
                   color="primary"
                 >
-                  Pay {totalPriceWithCurrency}
+                  Pagar {totalPriceWithCurrency}
                 </Button>
               </div>
             </form>

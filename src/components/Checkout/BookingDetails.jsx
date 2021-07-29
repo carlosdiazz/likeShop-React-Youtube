@@ -40,13 +40,13 @@ const BookingDetails = ({ user, setTotalPrice, checkoutData, handleBackStep, han
         </ListItem>
       ))}
       <ListItem>
-        <ListItemText primary="Shipping cost" />
+        <ListItemText primary="Precio del Shiping" />
         <Typography variant="body2">
           {`${totalShippingCost} ${shippingCurrency}`}
         </Typography>
       </ListItem>
       <ListItem>
-        <ListItemText primary="Total price" />
+        <ListItemText primary="Precio Total" />
         <Typography variant="body2">
           {totalPriceWithCurrency}
         </Typography>
